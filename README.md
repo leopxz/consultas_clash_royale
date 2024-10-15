@@ -56,7 +56,7 @@ fim: Data de fim (formato YYYY-MM-DD).
 
 ## Estrutura do Projeto
 <br>
-/seu_repositorio<br>
+/projeto_flask_clash<br>
 │<br>
 ├── app.py                # Código principal da aplicação<br>
 ├── templates/            # Diretório contendo os templates HTML<br>
