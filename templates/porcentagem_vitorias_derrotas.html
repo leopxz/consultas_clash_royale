@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porcentagem de Vitórias</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Resultados da Porcentagem de Vitórias e Derrotas</h1>
+    
+    {% if resultados %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Deck</th>
+                    <th>Taxa de Vitórias (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for resultado in resultados %}
+                <tr>
+                    <td>{{ resultado.deck }}</td>
+                    <td>{{ resultado.win_rate | round(2) }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>Nenhum resultado encontrado para os critérios especificados.</p>
+    {% endif %}
+    
+    <a href="/">Voltar</a>
+</body>
+</html>

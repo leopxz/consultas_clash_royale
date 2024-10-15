@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultas de Análise Clash Royale</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Consultas de Análise Clash Royale</h1>
+    </header>
+
+    <div class="consulta">
+      <h2>Porcentagem de Vitórias/Derrotas de uma Carta</h2>
+      <form action="/porcentagem_vitorias_derrotas" method="get">
+        <label for="carta">Carta:</label>
+        <input type="text" id="carta" name="carta" required>
+        <label for="inicio">Início (YYYY-MM-DD):</label>
+        <input type="date" id="inicio" name="inicio" required>
+        <label for="fim">Fim (YYYY-MM-DD):</label>
+        <input type="date" id="fim" name="fim" required>
+        <button type="submit">Consultar</button>
+      </form>
+    </div>
+    
+
+
+
+
+    <div class="consulta">
+      <h2>Decks com Mais de X% de Vitórias</h2>
+      <form action="/decks_vitoriosos" method="get">
+        <label for="porcentagem">Porcentagem Mínima de Vitórias:</label>
+        <input type="number" id="porcentagem" name="porcentagem" required>
+        <label for="inicio">Início (YYYY-MM-DD):</label>
+        <input type="date" id="inicio" name="inicio" required>
+        <label for="fim">Fim (YYYY-MM-DD):</label>
+        <input type="date" id="fim" name="fim" required>
+        <button type="submit">Consultar</button>
+      </form>
+    </div>
+
+    <div class="consulta">
+      <h2>Quantidade de Derrotas Utilizando um Combo de Cartas</h2>
+      <form action="/derrotas_combo" method="get">
+        <label for="cartas">Combo de Cartas (Separar por vírgula):</label>
+        <input type="text" id="cartas" name="cartas" required>
+        <label for="inicio">Início (YYYY-MM-DD):</label>
+        <input type="date" id="inicio" name="inicio" required>
+        <label for="fim">Fim (YYYY-MM-DD):</label>
+        <input type="date" id="fim" name="fim" required>
+        <button type="submit">Consultar</button>
+      </form>
+    </div>
+
+    <footer>
+      <p>&copy; 2024 - Análise Clash Royale</p>
+    </footer>
+  </div>
+</body>
+</html>
